@@ -21,7 +21,7 @@ def get_links():
         root = etree.fromstring(page, parser=html.HTMLParser())
 
         root.make_links_absolute(link)
-        elements = root.xpath('//*[@class="item-name"]')
+        elements = root.xpath('//*[@class="image d-flex"]')
         reviews.extend(i.get('href') for i in elements)
 
     browser.close()
