@@ -1,8 +1,4 @@
 from lxml import etree, html
-from selenium import webdriver
-import re
-
-from lxml import etree, html
 from time import sleep
 
 from selenium import webdriver
@@ -93,7 +89,7 @@ def get_data(link_file, output_file):
 
     browser = webdriver.Firefox()
     login(browser)
-    for i in range(631, len(links)):    #FIX
+    for i in range(len(links)):
         c = Cream(links[i])
         c.get_ingredients(browser)
         c.get_rating(browser)
